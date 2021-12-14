@@ -31,7 +31,7 @@ class TestPC(unittest.TestCase):
         result = not np.any(difference)
         print(result)
 
-    @unittest.skip("skipping")
+    #@unittest.skip("skipping")
     def test02(self):
         try:
             while 1:
