@@ -1,9 +1,11 @@
 import pyautogui as auto
 import cv2
 import numpy as np
-import  pyautogui
+import pyautogui
 import time
-import  unittest
+import unittest
+
+
 # try:
 #     number7_location = auto.locateOnScreen('../source_photoes/login_gui.png')   #传入按钮的图片
 #     print(number7_location)  # 返回屏幕所在位置
@@ -17,9 +19,10 @@ import  unittest
 
 
 ###
-#image图像比较
+# image图像比较
 ###
-#@unittest.skip("skipping")
+
+# @unittest.skip("skipping")
 class TestPC(unittest.TestCase):
     @unittest.skip("skipping")
     def test01(self):
@@ -31,15 +34,16 @@ class TestPC(unittest.TestCase):
         result = not np.any(difference)
         print(result)
 
-    #@unittest.skip("skipping")
+    # @unittest.skip("skipping")
     def test02(self):
         try:
             while 1:
                 time.sleep(10)
                 x, y = pyautogui.position()
-                print(x,y)
+                print(x, y)
         except:
             pass
 
+
 if __name__ == '__main__':
-    unittest.main() # unittest 的执行
+    unittest.main()  # unittest 的执行
