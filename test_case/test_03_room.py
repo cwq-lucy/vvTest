@@ -334,11 +334,7 @@ class testOPlayer(unittest.TestCase):
         time.sleep(3)
         pyautogui.click(611, 873)
 
-    # 关闭房间
-    #@unittest.skip("skipping")
-    def testroom17(self):
-        time.sleep(3)
-        pyautogui.click(1431, 95)
+
 
 
 if __name__ == '__main__':
