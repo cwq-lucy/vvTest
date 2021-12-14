@@ -21,7 +21,6 @@ class testOPlayer(unittest.TestCase):
         pyautogui.moveTo(611, 506, duration=1)
         pyautogui.doubleClick()
         pyautogui.typewrite('110016117', interval=0.25)
-        pyautogui.moveTo(743, 562, duration=1)
         login_button = auto.locateOnScreen('../source_photoes/login/login_button.png')  # 传入登录按钮的图片
         time.sleep(3)
         auto.screenshot('../photoes/login/login_button.png', region=(531, 647, 368, 60))  # 校对图片位置
@@ -110,6 +109,17 @@ class testOPlayer(unittest.TestCase):
         time.sleep(3)
         pyautogui.click(1073, 544)
         pyautogui.scroll(10)
+        time.sleep(3)
+        pyautogui.click(981, 592)
+        time.sleep(3)
+
+        #关闭心动值开关
+        menus = auto.locateOnScreen('../source_photoes/room/menus.png')
+        auto.click(menus)
+        time.sleep(3)
+        pyautogui.click(840, 839)
+        time.sleep(3)
+        pyautogui.click(1086, 502)
         time.sleep(3)
         pyautogui.click(981, 592)
         time.sleep(3)
@@ -275,6 +285,22 @@ class testOPlayer(unittest.TestCase):
         pyautogui.click(1436, 286)
         time.sleep(1)
         pyautogui.click(1410, 356)
+
+    #查看贵族列表、守护列表
+    def testRoom14(self):
+        pyautogui.click(821,190)
+        time.sleep(3)
+        pyautogui.click(853 ,229)
+        time.sleep(3)
+        pyautogui.moveTo(916 ,276)
+        time.sleep(3)
+        pyautogui.scroll(-2000)
+        time.sleep(3)
+        pyautogui.click(927 ,229)
+        time.sleep(3)
+        pyautogui.moveTo(916 ,276)
+        time.sleep(3)
+        pyautogui.scroll(-2000)
 
 if __name__ == '__main__':
     unittest.main() # unittest 的执行
